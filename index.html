@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>gaussixel · dab sandbox</title>
+    <link rel="icon" href="data:," />
+    <style>
+      html, body { margin: 0; height: 100%; background: #1c1512; overflow: hidden; }
+      #view, #view canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+      #stats, #hint { position: fixed; left: 14px; color: #f3e3c3; font: 12px/1.5 ui-monospace, Menlo, monospace; background: rgba(28, 20, 18, 0.6); padding: 6px 10px; border-radius: 3px; pointer-events: none; white-space: pre; }
+      #stats { top: 14px; }
+      #hint { bottom: 14px; }
+      body.drop::after { content: 'Drop a .glb / .gltf to paint it'; position: fixed; inset: 16px; display: grid; place-items: center; border: 2px dashed #f3e3c3; color: #f3e3c3; font: 20px Georgia, serif; background: rgba(28, 20, 18, 0.5); pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="view"></div>
+    <div id="stats"></div>
+    <div id="hint">drag: orbit · right-drag: pan · wheel: zoom · drop a .glb to paint it · H: hide panels</div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
